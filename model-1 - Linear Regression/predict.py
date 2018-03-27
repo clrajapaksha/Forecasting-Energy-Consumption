@@ -51,7 +51,7 @@ del result_df['Value']
 X = result_df[['Surface', 'IsDayOff', 'Weekday', 'Week']]
 
 model_path ='D:\Datasets\drivendata\Forecasting-Energy-Consumption\model-1 - Linear Regression\\'
-model = joblib.load(model_path+'model1-GPR.joblib.pkl')
+model = joblib.load(model_path+'model1-LR.joblib.pkl')
 
 y = model.predict(X)
 y_predict = pd.merge(submit_df, submission_frequency_df, on='ForecastId')
